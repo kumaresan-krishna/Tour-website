@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sree Kamala Vinayak Tours - Premium Tour Packages</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="logo.png" alt="Sree Kamala Vinayak Tours Logo" class="logo-image">
+                <h1>SREE KAMALA VINAYAK TOURS</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="company-info">
+                <h1 class="company-name">SREE KAMALA VINAYAK TOURS</h1>
+                <h2 class="company-location">KORATTUR, CHENNAI</h2>
+                <p class="company-address">No: 45/43, 222 Castle Flats T.N.H.B. 25th Street.</p>
+                
+                <div class="director-info">
+                    <h3><i class="fas fa-user-tie"></i> M. Jayakumar (Founder/Director)</h3>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919790835042">9790835042</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:Jai.sakthi.16@gmail.com">Jai.sakthi.16@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('packages')">
+                        <i class="fas fa-map-marked-alt"></i> View Tour Packages
+                    </button>
+                    <button class="btn btn-secondary" onclick="contactForBooking('General Inquiry')">
+                        <i class="fas fa-phone"></i> Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- All Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <h2 class="section-title">All Tour Packages</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <select id="durationFilter">
+                    <option value="">All Durations</option>
+                    <option value="3-4">3-4 Days</option>
+                    <option value="5-6">5-6 Days</option>
+                    <option value="7-8">7-8 Days</option>
+                    <option value="9+">9+ Days</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="">All Prices</option>
+                    <option value="0-15000">Under ₹15,000</option>
+                    <option value="15000-20000">₹15,000 - ₹20,000</option>
+                    <option value="20000-25000">₹20,000 - ₹25,000</option>
+                    <option value="25000+">Above ₹25,000</option>
+                </select>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="pilgrimage">Pilgrimage</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="international">International</option>
+                    <option value="beach">Beach</option>
+                </select>
+                <button class="btn btn-primary" onclick="applyFilters()">
+                    <i class="fas fa-filter"></i> Apply Filters
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button onclick="searchPackages()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Packages Grid -->
+            <div class="packages-grid" id="packagesGrid">
+                <!-- Packages will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Sree Kamala Vinayak Tours</h2>
+            
+            <div class="about-hero">
+                <div class="about-hero-content">
+                    <div class="about-intro">
+                        <h3>Your Trusted Partner for Spiritual Journeys</h3>
+                        <p>Located in Korattur, Chennai, we have been organizing premium pilgrimage and adventure tours across India and internationally for over 15 years. Our founder and director, M. Jayakumar, brings decades of experience in creating memorable spiritual journeys.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Tour Packages</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Happy Travelers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-hero-image">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Temple" />
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Trusted Service</h4>
+                        <p>15+ years of reliable tour operations with thousands of satisfied customers</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Group Packages</h4>
+                        <p>Specialized B2B rates for groups with customizable itineraries</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Quality Accommodation</h4>
+                        <p>Deluxe A/C rooms with double sharing and premium amenities</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Vegetarian Food</h4>
+                        <p>Pure vegetarian meals included with local and traditional cuisine</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Comfortable Transport</h4>
+                        <p>A/C vehicles and buses for safe and comfortable journeys</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock customer support during your entire journey</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-cta">
+                <h3>Ready to Start Your Spiritual Journey?</h3>
+                <p>Contact us today to plan your perfect pilgrimage or adventure tour</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('packages')">
+                        <i class="fas fa-map-marked-alt"></i> View All Packages
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-phone"></i> Get in Touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>No: 45/43, 222 Castle Flats T.N.H.B.<br>25th Street, Korattur, Chennai</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919790835042">+91 97908 35042</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:Jai.sakthi.16@gmail.com">Jai.sakthi.16@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Director</h4>
+                            <p>M. Jayakumar (Founder/Director)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="packageInterest">
+                                <option value="">Select Package Interest</option>
+                                <option value="kasi">Kasi Trips</option>
+                                <option value="chardham">Chardham Yatra</option>
+                                <option value="shiridi">Mantralaya-Shiridi</option>
+                                <option value="nepal">Nepal Trips</option>
+                                <option value="kashmir">Kashmir Trips</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-mountain"></i> SREE KAMALA VINAYAK TOURS</h3>
+                    <p>Your trusted partner for spiritual and adventure journeys across India and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Destinations</h4>
+                    <ul>
+                        <li>Kasi & Ayodhya</li>
+                        <li>Chardham Yatra</li>
+                        <li>Kashmir Valley</li>
+                        <li>Nepal Tours</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 97908 35042</p>
+                    <p><i class="fas fa-envelope"></i> Jai.sakthi.16@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sree Kamala Vinayak Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Package Modal -->
+    <div id="packageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Package details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
